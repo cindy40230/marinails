@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Meddon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+$web_width:1280px;
+$light_color:#f4f4f4;
+$dark_color:#1d1d1d;
+$gold:#907251;
+$main_bg:url(../img/main3.jpg);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+a {text-decoration: none;}
+ul {list-style-type: none;}
+.container {
+  max-width: $web_width;
+  margin: auto;
+  overflow: hidden;}
+.text_center {text-align: center;}
+.section_text {font-size: 1.2rem;}
+.section_title {
+  font-size: 3.2rem;
+  padding-bottom: 0.5rem;
+  font-family: 'Marck Script', cursive}
+.bg_accueil {
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);}
+.accueil {
+  background: $main_bg no-repeat center center/cover;
+}
+.p {
+  &_0 {padding: 5rem;}
+  &_1 {padding: 4rem;}
+  &_2 {padding: 3rem;}
+  &_3 { padding: 2rem;}
+  &_4 { padding: 1rem;}
+}
+.ptb {
+  &_0 {padding: 5rem 0; }
+  &_1 {padding: 4rem 0; }
+  &_2 { padding: 3rem 0;}
+  &_3 {padding: 2rem 0;}
+  &_4 {padding: 1rem 0;}
+}
+
+%btn_prop_shared {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.7s;
+}
+
+.btn {
+  &_cta {
+    @extend %btn_prop_shared;
+    color: $gold;
+    background-color: $dark_color;
+
+    &:hover {
+      color: $dark_color;
+      background-color: $gold;
+    }
+  }
+}
+/*---------------------page accueil------------------*/
+/*navigation*/
+.main_nav {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid $gold;
+  .first{display:none;}
+  .reseau {
+    display: flex;
+    justify-content: space-between;
+    a {
+      padding: 0.4rem 0.2rem;
+      
+      &:nth-child(1) {
+        border-right: 1px solid $gold;
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    .menu-toggle{display:none;}
+
+    
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    color: $gold;
+    font-family: 'Marck Script', cursive;
+    font-size: 1.5rem;
+    padding-bottom: 0.3rem;
+    transition: border-color 1s;
+
+    i {
+      padding: 0 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    &:hover,
+    &.curennt_page {
+      background-color: $dark_color;
+      padding: 0.3rem 1rem;
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+/***************header**************/
+.header {
+
+  height: 93.4vh;
+  color: $gold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .btn_header {
+    margin: 2.5rem;
+    border: 1px solid $gold;
+  }
+
+  .header_content {
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p:first-child {
+      font-size: 12rem;
+      opacity: 0.4;
+      padding: -10rem;
+      font-family: 'Meddon', cursive;
+      border-radius: 50%;
+      border: 2px solid $gold;
+    }
+
+    .cta_title {
+      font-size: 8rem;
+      margin-top: -8rem;
+      font-family: 'Yeseva One', cursive;
+      font-weight: 200;
+    }
+    .cta_catch {
+      font-size: 2.3rem;
+      font-family: 'Marck Script',
+        cursive;
+      font-style: italic;
+      opacity: 0.4;
+    }
+    &:hover {
+      .cta_title {
+        margin-top: -2rem;
+        transition: 0.4s;
+      }
+      p:first-child {
+        transform: translateY(1rem);
+        transition: 0.4s;
+      }
+    }
+  }
+}
+
+/*--------------------page about-----------*/
+.about_section {
+  width: 90%;
+
+  margin: 2rem auto;
+  color: $light_color;
+  .about_info {
+    display: flex;
+    .bio_content {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .about_title,
+      .about_slag {
+        align-self: flex-start;
+        font-size: 1.5rem;
+      }
+
+      .bta_about_info {
+        width: 40%;
+        margin-top: 1rem;
+      }
+    }
+    .slider_about {
+      box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+        inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.5),
+        inset 0 15px 15px rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      img {
+        width: 80%;
+      }
+    }
+  }
+
+
+  .avis {
+ 
+      h4 {
+         color: $gold;
+         font-size: 1.8rem;
+         padding: 1rem;
+         }
+      padding: 1.5rem 0;
+     
+          .avis_list {
+                     display: flex;
+                     justify-content: space-around;
+                     margin: 1.5rem;
+                    .btn_avis {
+                              margin: 3rem;
+                              width: 40%;
+                              }
+  
+                    .avis_client {
+                      box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+                        inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.5),
+                        inset 0 15px 15px rgba(0, 0, 0, 0.5);
+                      padding: 1rem;
+                      width: 30%;
+                      h3 {
+                        padding: 0.5rem;
+                        font-family: 'Yeseva One', cursive;
+                      }
+
+                      .fa-quote-left {
+                                     font-size: 2rem;
+                                    padding: 0.5rem;
+                                     }
+                      .star {
+                        margin-top: 1rem;
+                        color:$gold
+                      }
+                    }
+          }
+      
+    }
+  }
+
+/*--------------------page realisation-----------*/
+
+.realisations_section{
+  .realisations{
+    h5{color:$gold;background-color: $dark_color;font-size: 2rem;width: 95%;margin:1rem auto ;}
+    .realisation_title{color:$gold;font-size: 2rem; font-family:'Marck Script', cursive ;margin-bottom: 4rem;font-weight: 100;}
+    .realisations_list{
+      margin: 4rem 2rem;
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      flex-wrap: wrap;
+     
+      .realisation{
+        width: 30%;
+        padding: 1rem;
+        margin: 1rem 0;
+        box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+        inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.5),
+        inset 0 15px 15px rgba(0, 0, 0, 0.5);
+           
+        img{width:10em;height:10em;border-radius: 50%;}
+        h3{color:$light_color;padding: 1rem;}
+        p{color:$light_color;padding: 0 2.5rem;}
+        
+      }
+
+      
+    }
+    .slider{ max-width: 90%;display: flex;margin:0 auto;
+      .realisation_maquillage{
+        // width: 30%;
+        // padding: 1rem;
+        // margin: 1rem 0;
+        flex:1;
+        margin:0 25px;
+
+        box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+        inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.5),
+        inset 0 15px 15px rgba(0, 0, 0, 0.5);
+        
+        img{width:80%;height:200px;margin:0 auto;padding-top: 1rem;}
+        h3{color:$light_color;padding: 1rem;}
+        p{color:$light_color;padding: 1rem 2.5rem;}
+        
+      }
+      
+      
+     }
+      
+  }
+  
+}
+/*--------------------page tarif----------*/
+.tarifs_section {
+  .tarifs{
+    .tarif_title{color:$gold;font-size: 2rem; font-family:'Marck Script', cursive ;margin-bottom: 4rem;font-weight: 100}
+    .tarifs_list{
+    display: flex;
+    flex-direction: column;
+      .tarif_ongleries,.tarif_maquillage,.tarif_cils{
+        display:flex;
+        justify-content: space-around;
+        width: 70%;
+        margin: 1rem auto;
+        box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+        inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.5),
+        inset 0 15px 15px rgba(0, 0, 0, 0.5);
+        img{width: 30%; margin: 2.5rem;border:8px $gold solid;}
+        .table_tarif{
+          width: 50%;
+          margin:1.2rem 1rem;
+          
+          h3{color:$gold;font-size: 1.5rem;padding:1rem;}
+          table{
+           
+            width: 90%;
+            th,td{text-align: left;padding:0 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*--------------------page contact-----------*/
+.contact_section{
+
+  .contact{
+    position: relative;
+   .contact_bg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.7);width: 100%;
+    border-radius: 10px;
+    border:2px solid $gold; 
+  position: absolute; 
+  top: 0px;
+  left: 5%;
+  height: 99%;width: 89.7%;
+  .contact_info{
+    a{margin: 0.7rem 0;
+    .fa-facebook-square,.fa-instagram{font-size:2.5rem;color:$gold;margin: 0 1rem;}}
+    .contact_info_text{
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      color:$gold;
+      padding: 1rem;
+    
+    }
+  }
+  .contact_logo{
+  
+
+    p{
+      width: 15%;
+      margin: 0 auto;
+      color:$gold;
+      font-size: 5.5rem;
+      opacity: 0.8;
+      font-family: 'Meddon', cursive;
+      border-radius: 50%;
+      border:1px solid $gold;
+     
+
+    }
+    .cta_title{
+      color: $gold;font-size: 3rem;margin-top: -3.5rem;transition: 0.4s;
+    }
+   &:hover{
+    .cta_title{
+    margin-top: -2rem;
+    }
+   
+  }}
+}
+
+  // filter: grayscale(0.7);
+    .contact_tel{width: 90%;height:400px; z-index: 2;border-top-right-radius: 10px;border-top-left-radius: 10px;}
+    .contact_plan{width:90%; height:205px; z-index: 3;margin-top: -15px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;}}
+  }
+
+
+/*********footer**************/
+
+.main_footer {
+
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border-top: 2px solid $gold;
+
+  .footer_content {
+    color: $gold;
+
+    p {
+      padding: 1rem;
+
+      a {
+        color: $gold;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .contact_footer {
+      margin: 0 0.4rem;
+    }
+  }
+}
+
+@import 'media';

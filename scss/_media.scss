@@ -1,0 +1,244 @@
+@media(max-width:760px){
+
+  .p{
+    &_0{padding:2.5rem;}
+    &_1{padding:2rem;}
+    &_2{padding:1.5rem;}
+    &_3{padding:1rem;}
+    &_4{padding:0.5rem;}
+  }
+  
+  .ptb{
+    &_0{padding:2.5rem 0;}
+    &_1{padding:2rem 0;}
+    &_2{padding:1.5rem 0;}
+    &_3{padding:1rem 0;}
+    &_4{padding:0.5rem 0;}
+  }
+  .main_nav{
+    .reseau{
+      width: 100%;      
+      .menu-toggle{
+        display:block;
+        i{
+        color:$gold;
+        font-size: 1.5rem;}
+       
+      }
+    }
+    flex-direction: column;
+    justify-content: center;
+    .first
+    { display:none; text-align:center;   
+      &.active {
+        display: flex;
+        flex-direction: column;
+        li {
+          display: block;
+          font-size: 0.9rem;
+          padding: 0.2rem;
+          a{
+            display: block;
+          }
+      }  
+     }
+    }
+    .desktop{display:none;}
+      li {
+       
+        margin-top: 0.9rem;
+        font-size: 0.9rem;
+        padding: 1rem;     
+      }
+  }
+
+    /***************header**************/
+    .header {
+      height: 74vh;    
+      .btn_header {
+        margin: 1.5rem;
+      }
+      .header_content {
+        margin-top:4rem;    
+        p:first-child {
+          font-size: 8rem;      
+        }   
+        .cta_title {
+          font-size: 3.5rem;
+          margin-top: -3.5rem;    
+        }
+        .cta_catch {
+          font-size: 1rem;
+        }
+      }
+  }
+
+  /*--------------------page about-----------*/
+  .about_section {
+            margin:0;
+            width: 100%;
+            .about_info {
+              display: flex;
+              flex-direction: column;
+              .bio_content {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .about_title,
+                .about_slag {
+                  align-self: center;
+                  font-size: 1.5rem;
+                }
+                .about_text {
+                  text-align: justify;
+                  padding: 0.5rem 0;
+                }
+                .bta_about_info {
+                  width: 60%;
+                  margin-top: 0.5rem;
+                  align-self: center;
+                }
+              }
+              .slider_about {
+            
+                width: 90%;
+                margin:0 auto;
+                img {
+                  width: 80%;
+                }
+              }
+            }
+    
+       .avis {
+ 
+       h4 {
+       color: $gold;
+       font-size: 1.8rem;
+       padding: 1rem;
+       }
+       padding: 1.5rem 0;
+   
+        .avis_list {
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: space-around;
+                   margin: 1.5rem;
+                  .btn_avis {
+                            margin: 3rem;
+                            width: 40%;
+                            }
+
+                  .avis_client {
+                    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+                      inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.5),
+                      inset 0 15px 15px rgba(0, 0, 0, 0.5);
+                    padding: 1rem;
+                    width: 90%;
+                    h3 {
+                      padding: 0.5rem;
+                      font-family: 'Yeseva One', cursive;
+                    }
+
+                    .fa-quote-left {
+                                   font-size: 2rem;
+                                  padding: 0.5rem;
+                                   }
+                    .star {
+                      margin-top: 1rem;
+                      color:$gold
+                    }
+                  }
+        }
+    
+      }
+ }
+      /*--------------------page realisation-----------*/
+
+      .realisations_section{
+        .realisations{
+        
+        .realisations_list{
+          margin: 1rem 0rem;
+          display: flex;
+          flex-direction: column;        
+          .realisation{
+            width: 80%;
+         
+            }
+        }
+      }
+    }
+
+    /*--------------------page tarif----------*/
+     .tarifs_section {
+        .tarifs
+           .tarifs_list{
+                .tarif_ongleries,.tarif_maquillage,.tarif_cils{
+                  flex-direction: column;
+                  width: 70%;               
+                  img{width: 45%; margin:1.5rem auto;}
+                  .table_tarif{
+                           width: 90%;
+                           margin:1rem auto;         
+                   table{width: 100%;
+                    tr{
+                        th,td{text-align: left;padding:0 0.5rem;width: 50%;     
+                                &:nth-child(2){text-align: center}                   
+                        }
+                      }
+                   }
+                  }
+                }
+          }
+      }
+
+      /*--------------------page contact-----------*/
+        .contact_section{
+              .contact{
+                      .contact_bg{
+                            .contact_info{
+                                        a{
+                                           .fa-facebook-square,.fa-instagram{font-size:1.4rem;}
+                                        }
+                                        .contact_info_text{font-size: 0.8rem;}
+                            }
+                           .contact_logo{
+                                        p{    
+                                          margin: 0 auto;
+                                          color:$gold;
+                                          font-size: 3.5rem;
+                                          opacity: 0.8;
+                                          padding: 1rem;
+                                          font-family: 'Meddon', cursive;
+                                          border-radius: 50%;
+                                          border:1px solid $gold;
+                                        }
+                                        .cta_title{
+                                         color: $gold;font-size: 2rem;
+                                         margin-top: -2rem;
+                                         transition: 0.4s;
+                                        }
+                            &:hover{
+                                 .cta_title{ margin-top: -2rem;}
+                                }
+                          }
+                      }
+              }
+  }
+
+}
+
+@media(max-width:330px){
+    /*--------------------page contact-----------*/
+    .contact_section{
+      .contact{
+          .contact_bg{                   
+                .contact_logo{
+                     p{ width: 25%;}
+                }
+          }
+      }
+    }
+
+}
